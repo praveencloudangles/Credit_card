@@ -60,7 +60,7 @@ def data_vis():
     z=data.corr().values.tolist()
     z_text = np.around(z, decimals=4) # Only show rounded value (full value on hover)
     fig = ff.create_annotated_heatmap(z,x=y,y=y,annotation_text=z_text,colorscale=px.colors.sequential.Cividis_r,showscale=True)
-    fig.update_layout(template='plotly_dark', width=1500, height=1000)
+    fig.update_layout(template='plotly_dark', width=1200, height=900)
     # fig.show()
     fig.write_image("img.jpg")
 
