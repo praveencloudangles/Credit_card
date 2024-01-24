@@ -37,24 +37,24 @@ def data_vis():
                 data[value]
             ))
 
-    for i in numer:
-        fig = px.histogram(data, y=i)
-        fig.update_layout(template='plotly_dark')
-        fig.update_xaxes(showgrid=False, zeroline=False)
-        fig.update_yaxes(showgrid=False, zeroline=False)
-        # fig.show()
-        fig.write_image(f"{i}_hist.jpg")
-        # a.append(fig)
+    # for i in numer:
+    #     fig = px.histogram(data, y=i)
+    #     fig.update_layout(template='plotly_dark')
+    #     fig.update_xaxes(showgrid=False, zeroline=False)
+    #     fig.update_yaxes(showgrid=False, zeroline=False)
+    #     # fig.show()
+    #     fig.write_image(f"{i}_hist.jpg")
+    #     # a.append(fig)
 
 
-    for i in numer:
-        fig = px.box(data, y=i)
-        fig.update_layout(template='plotly_dark')
-        #fig.update_layout(plot_bgcolor = "plotly_dark")
-        fig.update_xaxes(showgrid=False,zeroline=False)
-        fig.update_yaxes(showgrid=False,zeroline=False)
-        # fig.show()
-        fig.write_image(f"{i}_box.jpg")
+    # for i in numer:
+    #     fig = px.box(data, y=i)
+    #     fig.update_layout(template='plotly_dark')
+    #     #fig.update_layout(plot_bgcolor = "plotly_dark")
+    #     fig.update_xaxes(showgrid=False,zeroline=False)
+    #     fig.update_yaxes(showgrid=False,zeroline=False)
+    #     # fig.show()
+    #     fig.write_image(f"{i}_box.jpg")
 
     y=data.corr().columns.tolist()
     z=data.corr().values.tolist()
