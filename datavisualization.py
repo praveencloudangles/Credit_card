@@ -21,7 +21,7 @@ def data_vis():
     print("numerical---------------", numer)
 
     #remove outliers using IQR method
-    outliers_present = ['PAYMENTS', 'PURCHASES', 'PURCHASES_TRX', 'ONEOFF_PURCHASES_FREQUENCY', 'MINIMUM_PAYMENTS', 'INSTALLMENTS_PURCHASES', 'CREDIT_LIMIT', 'CASH_ADVANCE_FREQUENCY', 'CASH_ADVANCE_TRX', 'CASH_ADVANCE', 'BALANCE', 'BALANCE_FREQUENCY']
+    outliers_present = ['PAYMENTS', 'PURCHASES', 'PURCHASES_TRX', 'ONEOFF_PURCHASES_FREQUENCY', 'MINIMUM_PAYMENTS', 'INSTALLMENTS_PURCHASES', 'CREDIT_LIMIT', 'CASH_ADVANCE_TRX', 'CASH_ADVANCE', 'BALANCE', 'BALANCE_FREQUENCY']
     for value in outliers_present:
         percentile25 = data[value].quantile(0.25)
         percentile75 = data[value].quantile(0.75)
